@@ -1,0 +1,18 @@
+<div class="card">
+    <div class="container-fluid">
+      <div class="row p-5">
+        <div class="image-grid">
+          <div *ngFor="let cat of cats" class="grid-item">
+            <div class="card-body">
+              <img [src]="cat.url" alt="Cat Image" class="img-fluid">
+            </div>
+            <div class="button-container">
+              <button type="submit" class="heart-button" (click)="addFavorite(cat)">
+                <i class="fas fa-heart"></i> Add to Favorites
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

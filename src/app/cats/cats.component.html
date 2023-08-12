@@ -1,0 +1,14 @@
+<button type="submit" class="new-cat-btn" (click)="openCreateCatModal()">Add new cat</button>
+<div class="cats-container">
+  <div *ngFor="let cat of cats" class="cat-card">
+    <img [src]="cat.image" alt="Cat" class="cat-image" />
+    <div class="cat-info">
+      <p><strong>Name:</strong> {{ cat.name }}</p>
+      <p><strong>Breed:</strong> {{ cat.breed }}</p>
+      <p><strong>Age:</strong> {{ cat.age }}</p>
+      <button class="edit-button" (click)="editCat(cat)"><i class="fas fa-pencil-alt"></i> Edit</button>
+      <button class="delete-button" (click)="deleteCat(cat._id)"><i class="fas fa-trash"></i> Delete</button>
+    </div>
+  </div>
+</div>
+

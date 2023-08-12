@@ -1,0 +1,14 @@
+.mat-toolbar {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-button {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 16px;
+  }
+  .nav-button.active {
+    font-weight: bold;
+  }

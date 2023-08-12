@@ -1,0 +1,28 @@
+<form (ngSubmit)="onSubmit()" class="form-container">
+    <div class="form-field">
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="cat.name" name="name" required class="form-input" placeholder="Enter Name">
+    </div>
+  
+    <div class="form-field">
+        <label for="breed">Breed:</label>
+        <input type="text" id="breed" [(ngModel)]="cat.breed" name="breed" required class="form-input" placeholder="Enter Breed">
+    </div>
+  
+    <div class="form-field">
+        <label for="age">Age:</label>
+        <input type="number" id="age" [(ngModel)]="cat.age" name="age" required class="form-input" placeholder="Enter Age">
+    </div>
+    
+    <div class="form-field">
+    <label>Favorite Cat Image:</label>
+    <select [(ngModel)]="selectedImage" name="selectedImage" required class="select-input">
+      <option *ngFor="let image of favoriteImages" [value]="image.url">{{ image.url }}</option>
+    </select>
+    </div>
+  
+    <div class="form-button-container">
+        <button type="submit" class="form-button primary">Add Cat</button>
+        <button type="button" class="form-button cancel" (click)="cancel()">Cancel</button>
+      </div>
+  </form>

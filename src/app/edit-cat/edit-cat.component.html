@@ -1,0 +1,29 @@
+<div class="title">
+    <h1>Edit Cat</h1>
+</div>
+<form (ngSubmit)="onSubmit()" class="form-container">
+  <div class="form-field">
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="editedCat.name" name="name" required class="form-input">
+  </div>
+
+  <div class="form-field">
+    <label>Breed:</label>
+    <input type="text" [(ngModel)]="editedCat.breed" name="breed" required class="form-input">
+  </div>
+
+  <div class="form-field">
+    <label>Age:</label>
+    <input type="number" [(ngModel)]="editedCat.age" name="age" required class="form-input">
+  </div>
+
+  <div class="form-field">
+    <label>Image:</label>
+    <div class="image-box">{{ editedCat.image }}</div>
+  </div>
+
+  <div class="form-button-container">
+    <button type="submit" class="form-button primary">Save Changes</button>
+    <button class="cancel-button" (click)="dialogRef.close()">Cancel</button>
+  </div>
+</form>

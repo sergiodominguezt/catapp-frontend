@@ -1,0 +1,8 @@
+<mat-form-field appearance="fill">
+    <mat-label>Select an Image</mat-label>
+    <mat-select [(ngModel)]="selectedImage">
+      <mat-option *ngFor="let image of favoriteImages" [value]="image.url">
+        <img [src]="image.url" class="dropdown-image" />
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
